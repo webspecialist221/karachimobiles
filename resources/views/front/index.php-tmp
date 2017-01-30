@@ -1,0 +1,386 @@
+<?php
+include 'Model/db-mysql.php';
+include 'Model/Home.php';
+include 'Model/single.php';
+include 'Model/allproduct.php';
+$home_obj       = new Home();
+$home_data_info = $home_obj->home_data();
+$Sumsung        = $home_obj->brand_data();
+$Iphon_brand    = $home_obj->brand_iphon();
+$Nokia          = $home_obj->brand_nokia();
+$Que            = $home_obj->brand_Q();
+$HTC            = $home_obj->brand_HTC();
+$Category       = new Singale();
+$cat_info       = $Category->get_categories();
+// echo "<pre>";
+// print_r($cat_info);
+// echo "</pre>";
+// exit();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <!-- Mirrored from sa.onlyphones.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jan 2017 16:33:21 GMT -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="X-UA-Compatibile" content="IE=9; IE=8; IE=7; IE=EDGE" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="google-site-verification" content="RTRSEqrc_CKmX5JIV97s-KixnSm5whgZ-z0wdAA7uOY" />
+        <meta name="geo.region" content="US" />
+        <meta name="geo.position" content="37.09024;-95.712891" />
+        <meta name="ICBM" content="37.09024, -95.712891" />
+        <meta name="verifyownership" content="782758c1c74fc7652fa95c2525ce6e75" />
+        <title>Mobile Prices in Pakistan | Latest Mobile Prices 2017</title>
+        <meta name="Keywords" content="mobile phone prices,cell phone,wireless cell phone,wireless smart phones,business internet phones,advanced american telephones,mobile phone,sony mobile,latest phones,mobile shop,new phones,new mobile,mobile phone comparison,mobile price list,cdma mobile,flip phone,3g mobiles,4g mobile phones, mobile prices in Pakistan" />
+        <meta name="Description" content="Onlyphones.com is world's largest mobile prices portal. you can check updated mobile prices in your desired currency and compare mobile phones." />
+        <!-- Style Sheet For Website -->
+        <link href="http://www.onlyphones.com/404.php" rel="shortcut icon" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="images/f0f13b1696b2efc4b1da94acfbd6263c.png" />
+        <!-- /Style Sheet For Website -->
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-66761555-2']);
+        _gaq.push(['_trackPageview']);
+        (function() {js
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+    </head>
+    <body>
+        <div id="content_area">
+            <div id="outer_header">
+                <div class="outer_content">
+                    <span class="left_keywords">
+                        <h1>World Largest Mobile Phone Price Website</h1>
+                    </span>
+                    <div class="nav_search fleft">
+                        <form action="index.html">
+                            <div>
+                                <input type="hidden" name="cx" value="partner-pub-7919933827471130:1675026804">
+                                <input type="hidden" name="cof" value="FORID:10">
+                                <input type="hidden" name="ie" value="UTF-8">
+                                <input type="text" name="q" size="70" class="text" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;https://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) left center no-repeat rgb(255, 255, 255);">
+                                <div class="button" id="uniform-undefined" style="-moz-user-select: none;">
+                                    <span><button type="submit" class="submit" style="opacity: 0;" name="sa" value="Search"></button></span>
+                                </div>
+                            </div>
+                            <input name="siteurl" type="hidden" value="/C:/Users/Shah%20qurashi/Contacts/Desktop/newsu/sa.onlyphones.com/index.html"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+                            <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+                            <script type="text/javascript">
+                            google.load("elements", "1", {
+                            packages: "transliteration"
+                            });
+                            </script><script src="https://www.google.com/uds/?file=elements&amp;v=1&amp;packages=transliteration" type="text/javascript"></script><link href="https://www.google.com/uds/api/elements/1.0/7ded0ef8ee68924d96a6f6b19df266a8/transliteration.css" type="text/css" rel="stylesheet"><script src="https://www.google.com/uds/api/elements/1.0/7ded0ef8ee68924d96a6f6b19df266a8/transliteration.I.js" type="text/javascript"></script>
+                            <script type="text/javascript" src="http://www.google.com/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+                            <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+                        </div>
+                    </div>
+                </div>
+                <!--Outer Header Ends -->
+                <div class="clear"></div>
+                <div id="header">
+                    <div class="logo">
+                        <a href="index.php"><img src="../public/assets/images/Logo.png" alt="Mobile Prices" title="Mobile Prices" /></a>
+                    </div>
+                    <div class="header_banner" style="border:1px solid;background:#fff">
+                        <img src="images/ads.jpg" alt="" />
+                    </div>
+                </div>
+                <!--Header Ends -->
+                <div class="clear"></div>
+<?php include 'menu.php';?>
+<div class="menubackgroundbottom">
+                    <marquee scrollamount="3">
+
+
+<?php foreach ($Que as $ticker) {?>
+
+	                    <li class="amazingcarousel-item" style="display: block; position: relative; background-image: none; background-color: transparent; margin: 0px;padding-left: 15px; float: left;padding-top:10px;padding-bottom:10px;">
+	                        <div class="amazingcarousel-item-container" style="position: relative; margin: 0px 1px;">
+	                            <div class="amazingcarousel-text">
+	                                <cite><a href="#"><?php echo $ticker['name'];?></a></cite>
+	                            </div>
+	                            <div style="clear:both;"></div>
+	                        </div>
+	                    </li>
+	<?php }?>
+</marquee>
+                </div>
+                <div id="header_menu_outer">
+                    <div id="header_menu">
+                        <div class="navbar_menu fleft">
+                            <a href="#" class="active">Browse by, <span class="drop">Brands</span></a>
+                        </div>
+                    </div>
+                    <!--/Header Menu Ends -->
+                </div>
+                <!--/Header Menu Outer End -->
+                <div class="clear"></div>
+                <div id="">
+                    <div class="left_area" id="left_panel">
+                        <ul class="menu_top_shadow">
+                            <h1>Browse By Brand</h1>
+<?php foreach ($cat_info as $category_data) {?>
+	                            <?php
+	$no_of_items = $Category->get_category_products($category_data['id']);
+	?>
+
+	                            <li><a href="searchby.php?id=<?php echo $category_data['id']?>" title="Nokia"><?php echo $category_data['title'];?></a><span><?php echo '('.$no_of_items['total_no_products'].')'?></span></li>
+	<?php }?>
+</ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By Network</h1>
+                            <li><a href="searchby.php?search_val=4g">4G Mobiles</a><img src="images/new.gif" alt="New" style="position:relative; top:4px;" /></li>
+                            <li><a href="searchby.php?search_val=3g">3G Mobile Prices</a></li>
+                        </ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By Type</h1>
+                            <li><a href="searchby.php?search_val=wifi" title="Wifi Mobiles">Wifi Mobiles</a></li>
+                            <li><a href="searchby.php?search_val=camera" title="Digital Camera Cell Phones">Camera Mobiles</a></li>
+                            <li><a href="searchby.php?search_val=bluetooth" title="Bluetooth Mobiles">Bluetooth Mobiles</a></li>
+                            <li><a href="searchby.php?search_val=fm_radio" title="FM Mobiles">FM Mobiles</a></li>
+
+                        </ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By OS</h1>
+                            <li><a href="searchby.php?search_val=Android" title="Android Phones">Android Phones</a></li>
+                            <li><a href="searchby.php?search_val=Symbian" title="Symbian Phones">Symbian Phones</a></li>
+                            <li><a href="searchby.php?search_val=Windows" title="Windows Phones">Windows Phones</a></li>
+                            <li><a href="searchby.php?search_val=Bada" title="Bada Phones">Bada Phones</a></li>
+                        </ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By RAM</h1>
+                            <li><a href="searchby.php?search_val=256MB">256MB RAM</a></li>
+                            <li><a href="searchby.php?search_val=512MB">512MB RAM</a></li>
+                            <li><a href="searchby.php?search_val=1GB">1GB RAM</a></li>
+                            <li><a href="searchby.php?search_val=2GB">2GB RAM</a></li>
+                            <li><a href="searchby.php?search_val=3GB">3GB or Above</a></li>
+                        </ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By Screen</h1>
+                            <li><a href="searchby.php?search_val=3.0">3.0 inch Screen</a></li>
+                            <li><a href="searchby.php?search_val=4.0">4.0 inch Screen</a></li>
+                            <li><a href="searchby.php?search_val=5.0">5.0 inch Screen</a></li>
+                            <li><a href="searchby.php?search_val=6.0">6.0 inch Screen</a></li>
+                            <li><a href="searchby.php?search_val=7.0">7.0 inch Screen</a></li>
+                            <li><a href="searchby.php?search_val=8.0">8.0 inch Screen</a></li>
+                            <!--<li><a href="search-by-screen/9_inch">9.0 inch Screen</a></li>-->
+                        </ul>
+                        <ul class="menu_top_shadow">
+                            <h1>Search By Camera</h1>
+                            <li><a href="searchby.php?search_val=13MP">13 MP Camera OR Above</a></li>
+                            <li><a href="searchby.php?search_val=8MP">8 MP Camera</a></li>
+                            <li><a href="searchby.php?search_val=5MP">5 MP Camera</a></li>
+                            <li><a href="searchby.php?search_val=3MP">3 MP Camera</a></li>
+                            <li><a href="searchby.php?search_val=2MP">2 MP Camera</a></li>
+                            <li><a href="searchby.php?search_val=1MP">1.3 MP Camera</a></li>
+                            <!--<li><a href="search-by-screen/9_inch">9.0 inch Screen</a></li>-->
+                        </ul>
+                        <!-- <ul class="menu_top_shadow" style="margin-top:20px;">
+
+                            <div style="text-align:center; width:200px; height:200px">
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=320&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                            </div>
+                        </ul> -->
+                        <!-- <ul class="menu_top_shadow" style="margin-top:20px;background: #fff;">
+
+                            <div style="text-align:center; width:200px; height:300px;border:2px solid;">
+                                google add here
+
+                            </div>
+                        </ul> -->
+                    </div>
+                    <a href="javascript:void(0);" class="slider-arrow show">Browse by Category</a>
+                    <div class="main_area">
+                        <!--<div class="loader" style="display:none; position:absolute;left:40%;top:40%;"><img src="images/loader.gif" /></div>-->
+                        <div class="latest_slider">
+                            <h2 class="recent_mobiles">World Largest Mobile Phone Price Website</h2>
+                            <div id='carousel_container'>
+                                <div id='carousel_inner'>
+                                    <ul id='carousel_ul'>
+<?php foreach ($home_data_info as $slider_data) {
+	?>
+
+	                                        <li>
+	                                            <a href="single.php?id=<?php echo $slider_data['id'];?>" title="Infinix Zero 4 Price in Pakistan"><img src="../public/assets/products/<?php echo $slider_data['img'];?>" alt="Infinix Zero 4 Price in Pakistan" border="0" height="100" /></a>
+	                                            <br />
+	                                            <h2 class="latest_h2"><?php echo $slider_data['name'];?></h2>
+	                                            <span class="latest_price"><?php echo $slider_data['price'];?></span>
+	                                        </li>
+	<?php }?>
+</ul>
+                                </div>
+                                <input type='hidden' id='hidden_auto_slide_seconds' value=0 />
+                            </div>
+                            <!--  <span style="float:right;margin-right:50px;">
+
+                                <h1>Slider</h1>
+                            </span> -->
+                        </div>
+                        <!-- <div class="header_banner_main" style="border:1px solid;">
+                            Google Add here
+                        </div> -->
+                        <div class="main_left">
+                            <h2>Samsung Mobile Phones
+                            <span style="float: right; margin-right: 15px;color:#fff;">
+                                <a href="allproducts.php?id=6"style="color:#fff;">View All</a>
+                                </h2>
+                                <div>
+                                    <ul>
+<?php foreach ($Sumsung as $Sumsung_data) {?>
+
+
+	                                        <li>
+	                                            <div class="viewed_pic">
+	                                                <a href="single.php?id=<?php echo $Sumsung_data['id']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan"><img src="../public/assets/products/<?php echo $Sumsung_data['img']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan" alt="Samsung Galaxy S6 Edge Plus Price in Pakistan" border="0" height="100" /></a>
+	                                            </div>
+	                                            <div class="mob_title most_title"><a href="single.php?id=<?php echo $Sumsung_data['id']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan">
+	<?php echo $Sumsung_data['name']?>
+	                                            </a></div>
+	                                            <div class="mob_price">SAR,<?php echo $Sumsung_data['price']?></div>
+	                                        </li>
+	<?php }?>
+</ul>
+                                </div>
+
+                                <div class="clear"></div>
+                                <h2>IPhone Mobile Phones
+                                <span style="float: right; margin-right: 15px;color:#fff;"><a href="allproducts.php?id=2"
+                                style="color:#fff;">View All</a>
+                                </h2>
+                                <div>
+                                    <ul>
+<?php foreach ($Iphon_brand as $iphone_data) {?>
+
+
+	                                        <li>
+	                                            <div class="viewed_pic">
+	                                                <a href="single.php?id=<?php echo $iphone_data['id']?>" title="QMobile Noir Z12 Price in Pakistan"><img src="../public/assets/products/<?php echo $iphone_data['img']?>" alt="QMobile Noir Z12 Price in Pakistan" border="0" height="100" /></a>
+	                                            </div>
+	                                            <div class="mob_title most_title"><a href="single.php?id=<?php echo $iphone_data['id']?>" title="QMobile Noir Z12 Price in Pakistan"><?php echo $iphone_data['name']?></a></div>
+	                                            <div class="mob_price">SAR,<?php echo $iphone_data['price']?></div>
+	                                        </li>
+	<?php }?>
+</ul>
+                                </div>
+                                <div class="header_banner_main" style="border:thin #ccc solid;width:728px;height: 90px;">
+                                    <img src="images/ads.jpg" alt="" />
+                                </div>
+                                <div class="clear"></div>
+                                <h2>Nokia Mobile Phones
+                                <span style="float: right; margin-right: 15px;color:#fff;"><a href="allproducts.php?id=1"
+                                style="color:#fff;">View All</a>
+                                </h2>
+                                <div>
+                                    <ul>
+<?php foreach ($Nokia as $Nokia_data) {?>
+
+
+	                                        <li>
+	                                            <div class="viewed_pic">
+	                                                <a href="single.php?id=<?php echo $Nokia_data['id']?>" title="Huawei Honor Holly 2 Plus Price in Pakistan"><img src="../public/assets/products/<?php echo $Nokia_data['img']?>" title="Huawei Honor Holly 2 Plus Price in Pakistan" alt="Huawei Honor Holly 2 Plus Price in Pakistan" border="0" height="100" /></a>
+	                                            </div>
+	                                            <div class="mob_title most_title"><a href="single.php?id=<?php echo $Nokia_data['id']?>" title="Huawei Honor Holly 2 Plus Price in Pakistan"><?php echo $Nokia_data['name']?></a></div>
+	                                            <div class="mob_price">SAR,<?php echo $Nokia_data['price']?></div>
+	                                        </li>
+	<?php }?>
+</ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="main_left">
+                                <h2>Q-Mobile
+                                <span style="float: right; margin-right: 15px;color:#fff;"><a href="allproducts.php?id=9"
+                                style="color:#fff;">View All</a>
+                                </h2>
+                                <div>
+                                    <ul>
+<?php foreach ($Que as $q_mob) {?>
+
+
+	                                        <li>
+	                                            <div class="viewed_pic">
+	                                                <a href="single.php?id=<?php echo $q_mob['id']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan"><img src="../public/assets/products/<?php echo $q_mob['img']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan" alt="Samsung Galaxy S6 Edge Plus Price in Pakistan" border="0" height="100" /></a>
+	                                            </div>
+	                                            <div class="mob_title most_title"><a href="single.php?id=<?php echo $q_mob['id']?>" title="Samsung Galaxy S6 Edge Plus Price in Pakistan"><?php echo $q_mob['name']?></a></div>
+	                                            <div class="mob_price">SAR <?php echo $q_mob['price']?></div>
+	                                        </li>
+	<?php }?>
+</ul>
+                                </div>
+                                <div class="header_banner_main" style="border:thin #ccc solid;width:728px;height: 90px;">
+                                    <img src="images/ads.jpg" alt="" />
+                                </div>
+                                <div class="clear"></div>
+                                <h2>HTC Mobile Phones
+                                <span style="float: right; margin-right: 15px;color:#fff;"><a href="allproducts.php?id=8" style="color:#fff;">View All</a></span>
+                                </h2>
+                                <div>
+                                    <ul>
+<?php foreach ($HTC as $htc_data) {?>
+
+
+	                                        <li>
+	                                            <div class="viewed_pic">
+	                                                <a href="single.php?id=<?php echo $htc_data['id']?>" title="QMobile Noir Z12 Price in Pakistan"><img src="../public/assets/products/<?php echo $htc_data['img']?>" title="QMobile Noir Z12 Price in Pakistan" alt="QMobile Noir Z12 Price in Pakistan" border="0" height="100" /></a>
+	                                            </div>
+	                                            <div class="mob_title most_title"><a href="single.php?id=<?php echo $htc_data['id']?>" title="QMobile Noir Z12 Price in Pakistan"><?php echo $htc_data['name']?></a></div>
+	                                            <div class="mob_price">SAR<?php echo $htc_data['price']?></div>
+	                                        </li>
+	<?php }?>
+
+                                    </ul>
+                                </div>
+                                <!-- <div class="header_banner_main" style="border:1px solid;width:100%">
+
+                                </div> -->
+                                <div class="clear"></div>
+
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div id="footer_outer">
+
+                            <div class="our-network" style="border-top:1px solid #fff;">
+                                <div style="
+                                    width: 24%;
+                                    /* float:right; */
+                                    padding: 25px;
+                                    padding-bottom: 51px;
+                                    /* border: 1px solid; */
+                                    text-align: center;
+                                    margin: auto;
+                                    background: black;
+                                    " class="right_socil_icon">
+                                    <h2 style="
+                                    float: left;
+                                    color: #fff;
+                                    margin-top: -1px;
+                                    padding: 5px;
+                                    ">social</h2>
+                                    <div class="social"><img src="images/fc.png"></div>
+                                    <div class="social"><img src="images/g.png"></div>
+                                    <div class="social"><img src="images/tw.png"></div>
+                                    <div class="social"><img src="images/in.png"></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright_inner" style="background: #19c325;
+                            padding-left: 0px;
+">Copyright &copy; 2017 Onlyphones.com All Rights Reserved. Latest Mobile Prices  | Design &amp; Developed By <a href="#" rel="nofollow" title="Seo Company USA"></a>
+                            <a href="#" rel="nofollow" title="Seo Company USA">home</a>
+                            <a href="#" rel="nofollow" title="Seo Company USA">there</a>
+                            <br>
+                        </div>
+                    </body>
+                </html>

@@ -2,7 +2,7 @@
         <div class="left_col scroll-view">
 
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+            <a href="index.html" class="site_title"><h3>Karachi Mobile</h3></a>
           </div>
           <div class="clearfix"></div>
 
@@ -13,7 +13,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>John Doe</h2>
+              <h2>{{Auth::user()->first_name}} {{Auth::user()->last_name}}</h2>
             </div>
           </div>
           <!-- /menu prile quick info -->
@@ -23,11 +23,26 @@
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
-              <h3>General</h3>
+              <h3>{{Auth::user()->type}}</h3>
               <ul class="nav side-menu">
-                <li><a href="#"><i class="fa fa-home"></i> Home </a>
+                <li><a href="admin"><i class="fa fa-home"></i> Home </a>
                 </li>
-                <li><a><i class="fa fa-edit"></i> Categories <span class="fa fa-chevron-down"></span></a>
+                @if(Auth::user()->type == 'Admin')
+                <li><a><i class="fa fa-wrench"></i> Setting <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="{{url('admin/general-setting')}}">General Setting</a>
+                    </li>
+                    <li><a href="{{url('admin/home-setting')}}">Home Page Setting</a>
+                    </li>
+                    <li><a href="{{url('admin/company-setting')}}">Company Page Setting</a>
+                    </li>
+                    <li><a href="{{url('admin/product-setting')}}">Product Page Setting</a>
+                    </li>
+                  </ul>
+                </li>
+                @endif
+                @if(Auth::user()->type == 'Admin')
+                <li><a><i class="fa fa-bars"></i> Categories <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
                     <li><a href="{{url('admin/categories/create')}}">Add</a>
                     </li>
@@ -35,9 +50,25 @@
                     </li>
                   </ul>
                 </li>
-                
-                
-                
+                @endif
+                <li><a><i class="fa fa-product-hunt"></i> Products <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="{{url('admin/products/create')}}">Add</a>
+                    </li>
+                    <li><a href="{{url('admin/products')}}">List</a>
+                    </li>
+                  </ul>
+                </li>
+                @if(Auth::user()->type == 'Admin')
+                <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu" style="display: none">
+                    <li><a href="{{url('admin/users/create')}}">Add</a>
+                    </li>
+                    <li><a href="{{url('admin/users')}}">List</a>
+                    </li>
+                  </ul>
+                </li>
+                @endif
               </ul>
             </div>
           </div>
