@@ -3,13 +3,14 @@
 <div class="main_container">
     <div class="cell_phones">
         <div class="breadcrumb">
-            <a href="index.html" title="Home Page">Home</a>&nbsp;<span>&raquo;</span>&nbsp; Latest Mobile Phones in Pakistan 
+            <a href="index.html" title="Home Page">Home</a>&nbsp;<span>&raquo;</span>&nbsp; Your Search Result is
         </div>
         <div class="clear"></div>
-        <h1>Latest Mobile Prices in Pakistan</h1>
+        <h1>Your Search Result is....</h1>
         <div class="list_cellphone">
             <ul>
             {{-- {{dd($productData)}} --}}
+            @if(!empty($productData))
             @foreach($productData as $data)
                 <li style="text-align: center;>
                     <p class="box-mobile">
@@ -26,7 +27,10 @@
                         <a href="{{url('',['singles',$data->pid,$data->cat_id])}}">View Detail</a>
                     </span>
                 </li>
-            @endforeach    
+            @endforeach
+            @else
+                    <h3 style="text-align: center;">Result Not Found</h3>
+            @endif    
             </ul>
         </div>
     </div>
@@ -38,15 +42,9 @@
         <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar">
             <img src="{{asset('assets/images/ads2.jpg')}}" alt="" />
         </div><br/>
-        <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar">
+        <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar" id="about_ad2">
             <img src="{{asset('assets/images/ads2.jpg')}}" alt="" />
         </div>  
     </div>  
-    <div style="width:460px;height:40px;border:2px solid;float:right; background:#fff;display:none;" class="hide_sidebar" >
-        1st Google here hhe
-    </div>
-  <div style="width:460px;height:40px;border:2px solid;float:right; background:#fff;display:none;" class="hide_sidebar" >
-    2nd google ads here
-  </div>
 </div>
 @stop

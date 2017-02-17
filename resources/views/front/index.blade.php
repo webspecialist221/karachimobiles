@@ -11,7 +11,7 @@
             <ul id="carousel_ul">
                 @foreach($sliders as $slider)                                        
                 <li>
-                    <a href="" >
+                    <a href="{{url('',['singles',$slider->pid,$slider->cat_id])}}" >
                         <img src="{{asset($slider->img)}}" alt="Infinix Zero 4 Price in Pakistan" border="0" height="100">
                     </a>
                     <br>
@@ -96,7 +96,7 @@
                 <div class="mob_title most_title">
                     <a href="{{url('',['singles',$nokia->pid,$nokia->cat_id])}}">{{$nokia->name}}</a>
                 </div>
-                <div class="mob_price">Rs: {{$nokia->price}}</div>
+                 <div class="mob_price">Rs: {{$nokia->price}}</div>
             </li>
         @endforeach
         </ul>

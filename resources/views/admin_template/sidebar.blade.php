@@ -44,31 +44,33 @@
                 @if(Auth::user()->type == 'Admin')
                 <li><a><i class="fa fa-bars"></i> Categories <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="{{url('admin/categories/create')}}">Add</a>
+                    <li><a href="{{url('admin/categories/create')}}">Add Category</a>
                     </li>
-                    <li><a href="{{url('admin/categories')}}">List</a>
+                    <li><a href="{{url('admin/categories')}}">All Categories</a>
                     </li>
                   </ul>
                 </li>
                 @endif
                 <li><a><i class="fa fa-product-hunt"></i> Products <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="{{url('admin/products/create')}}">Add</a>
+                    <li><a href="{{url('admin/products/create')}}">Add Product</a>
                     </li>
-                    <li><a href="{{url('admin/products')}}">List</a>
+                    <li><a href="{{url('admin/products')}}">All Products</a>
                     </li>
                   </ul>
                 </li>
                 @if(Auth::user()->type == 'Admin')
                 <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu" style="display: none">
-                    <li><a href="{{url('admin/users/create')}}">Add</a>
+                    <li><a href="{{url('admin/users/create')}}">Add User</a>
                     </li>
-                    <li><a href="{{url('admin/users')}}">List</a>
+                    <li><a href="{{url('admin/users')}}">All Users</a>
                     </li>
                   </ul>
                 </li>
                 @endif
+                <li><a href="{{url('/')}}" target="_blank"><i class="fa fa-home"></i> Visit Site </a>
+                </li>
               </ul>
             </div>
           </div>

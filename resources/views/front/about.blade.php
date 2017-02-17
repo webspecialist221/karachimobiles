@@ -8,19 +8,19 @@
         <div class="list_cellphone">
 
         <p style="line-height: 20px;font-size: 14px;"">
-        <b>Personal Information</b>
-            This Privacy Policy governs the manner in which karachimobile collects, maintains and discloses information collected from users of the www.karachimobile.com website ("website"). This privacy policy applies to the Site and all products and services offered by karachimobile.<br>
+        {{-- <b>Personal Information</b> --}}
+             <b>Karachimobile.com</b> is best website for latest Mobile Phone Price in Pakistan. Especially in Karachi, Lahore and Faisalabad. Our Passion to provide you latest Mobile Phone Price and Specification. Our team daily update price (Human error possible). This price is not 100% correct. For 100% correct price. Please visit or contact local Mobile Shop and Mobile Phone Dealers. If you see any error in this site. Please <a href="{{url('contact')}}"><b>contact us</b></a>. And right your opinion to make this site better for you.<br>
         </p>
         </div>
         <h1>Our Team</h1>
          <ul style="margin-left: 90px;">
-             <li style="width: 200px;border-radius:10px;float:left;margin:10px;border: thin solid green;height: 250px;">
-                <img src="{{asset('assets/images/img.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;">
+             <li class="abt">
+                <img class="abt_img" src="{{asset('assets/images/tahir.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;width:128px;" target="_blank">
                 <h3 style="text-align: center;color:green;">Muhammad Tahir
-                    <br><small style="color:black;">Product Manager</small>
+                    <br><small style="color:black;">Website Manager</small>
                 </h3>
                 <div style="text-align: center;">
-                    <a href="" ><b style="font-size: 12px;">Facebook</b>
+                    <a href="https://www.facebook.com/mtahir.tahir.946" ><b style="font-size: 12px;">Facebook</b>
                     </a> | 
                     <a href="" ><b style="font-size: 12px;">Google+</b>
                     </a>
@@ -28,13 +28,13 @@
                 
              </li>
 
-             <li style="width: 200px;border-radius:10px;float:left;margin:10px;border: thin solid green;height: 250px;">
-                <img src="{{asset('assets/images/img.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;">
+             <li class="abt">
+                <img class="abt_img" src="{{asset('assets/images/zahid.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px; width: 128px">
                 <h3 style="text-align: center;color:green;">Muhammad Zahid
                     <br><small style="color:black;">SEO Expert</small>
                 </h3>
                 <div style="text-align: center;">
-                    <a href="" ><b style="font-size: 12px;">Facebook</b>
+                    <a href="https://www.facebook.com/muhammadzahidgojra" target="_blank"><b style="font-size: 12px;">Facebook</b>
                     </a> | 
                     <a href="" ><b style="font-size: 12px;">Google+</b>
                     </a>
@@ -42,13 +42,13 @@
                 
              </li>
 
-             <li style="width: 200px;border-radius:10px;float:left;margin:10px;border: thin solid green;height: 250px;">
-                <img src="{{asset('assets/images/saddam.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;width:128px;height: 128px;">
+             <li class="abt">
+                <img class="abt_img" src="{{asset('assets/images/saddam.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;width:128px;height: 128px;">
                 <h3 style="text-align: center;color:green;">Saddam Hussain
                     <br><small style="color:black;">Web Developer</small>
                 </h3>
                 <div style="text-align: center;">
-                    <a href="" ><b style="font-size: 12px;">Facebook</b>
+                    <a href="https://www.facebook.com/terriblespeciallist/?ref=aymt_homepage_panel" target="_blank"><b style="font-size: 12px;">Facebook</b>
                     </a> | 
                     <a href="" ><b style="font-size: 12px;">Google+</b>
                     </a>
@@ -56,13 +56,13 @@
                 
              </li>
 
-             <li style="width: 200px;border-radius:10px;float:left;margin:10px;border: thin solid green;height: 250px;">
-                <img src="{{asset('assets/images/img.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;">
+             <li class="abt">
+                <img class="abt_img" src="{{asset('assets/images/sohail.jpg')}}" alt="" style="margin:10px 35px;border-radius: 100px;">
                 <h3 style="text-align: center;color:green;">Muhammad Sohail Khan
                     <br><small style="color:black;">Market Expert</small>
                 </h3>
                 <div style="text-align: center;">
-                    <a href="" ><b style="font-size: 12px;">Facebook</b>
+                    <a href="https://www.facebook.com/profile.php?id=100000753182739" target="_blank"><b style="font-size: 12px;">Facebook</b>
                     </a> | 
                     <a href="" ><b style="font-size: 12px;">Google+</b>
                     </a>

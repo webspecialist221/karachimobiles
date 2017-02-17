@@ -20,7 +20,7 @@
                     <p class="mob_title2">
                         <a href="{{url('',['singles',$data->pid,$data->cat_id])}}">{{$data->name}}</a>
                     </p>
-                    <span class="price"></span>
+                    <span class="price">{{$data->price}}</span>
                     <p class="mob_detail">
                         {{substr($data->description,0,60)}}   
                     </p>
@@ -37,26 +37,12 @@
             <img src="{{asset('assets/images/ads2.jpg')}}" alt="" />
         </div>
         <br />
-        <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar">
+        <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar" id="about_ad2">
             <img src="{{asset('assets/images/ads2.jpg')}}" alt="" />
         </div>
         <br />
-        <!-- <div style="border:1px solid #ccc;height:600px;width:160px;" class="hide_sidebar">
-            <img src="{{asset('assets/images/ads2.jpg')}}" alt="" />
-        </div> -->
         
-    </div>
-    <div
-        style="width:460px;height:40px;border:2px solid;
-        float:right; background:#fff;display:none;" class="hide_sidebar" >
         
-        1st Google here hhe
-    </div>
-    <div
-        style="width:460px;height:40px;border:2px solid;
-        float:right; background:#fff;display:none;" class="hide_sidebar" >
-        
-        2nd google ads here
     </div>
 </div>
 @stop

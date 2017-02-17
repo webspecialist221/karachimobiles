@@ -62,6 +62,9 @@ class ProductController extends Controller
             'camera' => $request->camera,
             'bluetooth' => $request->bluetooth,
             'fm_radio' => $request->fm_radio,
+            'meta_keyword' => $request->meta_keyword,
+            'meta_description' => $request->meta_description,
+
             ]);
         $product_id = $product->id;
         $product_feature = ProductsFeature::create([
@@ -71,8 +74,6 @@ class ProductController extends Controller
             'dimensions_depth' => $request->dimensions_depth,
             'weight' => $request->weight,
             'color' => $request->color,
-            'screen_size_width' => $request->screen_width,
-            'screen_size_height' => $request->screen_height,
             'display_size' => $request->size,
             'ringtones' => $request->ringtone,
             'ram' => $request->ram,
@@ -137,6 +138,14 @@ class ProductController extends Controller
         $product->cat_id = $request->cat_id;
         $product->name = $request->name;
         $product->description = $request->description;
+        if(!empty($request->file)){
+            $file = $request->file;
+            $destinationPath = 'products'; // upload path
+            $extension = $file->getClientOriginalExtension(); // getting image extension
+            $fileName = $destinationPath.'/'.rand(11111,99999).'.'.$extension;
+            $moved = $file->move($destinationPath, $fileName);
+            $product->img = $fileName;
+        }
         $product->price = $request->price;
         $product->three_g = $request->three_g;
         $product->four_g = $request->four_g;
@@ -144,6 +153,8 @@ class ProductController extends Controller
         $product->camera = $request->camera;
         $product->bluetooth = $request->bluetooth;
         $product->fm_radio = $request->fm_radio;
+        $product->meta_keyword = $request->meta_keyword;
+        $product->meta_description = $request->meta_description;
         $product->save();
 
         $product_feature = ProductsFeature::find($request->product_feature_id);
@@ -153,8 +164,6 @@ class ProductController extends Controller
         $product_feature->dimensions_depth = $request->dimensions_depth;
         $product_feature->weight = $request->weight;
         $product_feature->color = $request->color;
-        $product_feature->screen_size_width = $request->screen_width;
-        $product_feature->screen_size_height = $request->screen_height;
         $product_feature->display_size = $request->size;
         $product_feature->ringtones = $request->ringtone;
         $product_feature->ram = $request->ram;

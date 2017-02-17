@@ -37,7 +37,8 @@
                                 <!--ads-->
                                 
                                 <div class="margin" >
-                                    <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fonlyphonesusa&amp;width=340px&amp;height=280&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=299335346889541" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:340px; height:280px;" allowtransparency="true"></iframe>
+                                   <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKarachiMobile-1195954990524513%2F&tabs&width=340&height=280&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                                    {{-- <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fonlyphonesusa&amp;width=340px&amp;height=280&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=299335346889541" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:340px; height:280px;" allowtransparency="true"></iframe> --}}
                                     
                                     
                                     
@@ -48,7 +49,9 @@
                                 <div class="phone_menu">
                                     <ul>
                                         <li>
-                                            <div class="price_strong" style="border-radius: 10px;">Rs: {{$data->price}}</div>
+                                            <span style="float: left;font-size: 18px;margin-right: -10px;color: black;margin-top: 7px;">Price:</span><div class="price_strong" style="border-radius: 10px;">Rs: {{$data->price}}
+                                            </div>
+                                            
                                         </li>
                                     </ul>
                                 </div>
@@ -95,14 +98,14 @@
                             <div class="border_bottom">
                                 <div class="grid_2 nomargin_left padding_left_6"><b>Dimensions</b></div>
                                 <div class="grid_13 nomargin">
-                                    {{$data->dimensions_width}} x {{$data->dimensions_length}} x {{$data->dimensions_depth}} mm 
+                                    {{$data->dimensions_width}} x {{$data->dimensions_length}} x {{$data->dimensions_depth}}
 
                                 </div>
                             </div>
                             
                             <div class="border_bottom">
                                 <div class="grid_2 nomargin_left padding_left_6"><b>Weight</b></div>
-                                <div class="grid_13 nomargin">{{$data->weight}}g</div>
+                                <div class="grid_13 nomargin">{{$data->weight}}</div>
                             </div>
                             
                             
@@ -154,7 +157,7 @@
                             @if($data->three_g == 1)
                                 <div class="border_bottom">
                                 <div class="grid_2 nomargin_left padding_left_6">
-                                    <b>3g</b>
+                                    <b>3G</b>
                                 </div>
                                 <div class="grid_13 nomargin">Yes</div>
                             </div>
@@ -163,7 +166,7 @@
                             @if($data->four_g == 1)
                                 <div class="border_bottom">
                                 <div class="grid_2 nomargin_left padding_left_6">
-                                    <b>4g</b>
+                                    <b>4G</b>
                                 </div>
                                 <div class="grid_13 nomargin">Yes</div>
                             </div>
@@ -175,13 +178,13 @@
                                 <div class="grid_2 nomargin_left padding_left_6">
                                     <b>Primary</b>
                                 </div>
-                                <div class="grid_13 nomargin">{{$data->primary_camera}} pixel</div>
+                                <div class="grid_13 nomargin">{{$data->primary_camera}}</div>
                             </div>
                             <div class="border_bottom">
                                 <div class="grid_2 nomargin_left padding_left_6">
                                     <b>Secondary</b>
                                 </div>
-                                <div class="grid_13 nomargin">{{$data->secondary_camera}} pixel</div>
+                                <div class="grid_13 nomargin">{{$data->secondary_camera}}</div>
                                  
                             </div>
                             
@@ -191,7 +194,7 @@
                                 <div class="grid_2 nomargin_left padding_left_6">
                                     <b>OS</b>
                                 </div>
-                                <div class="grid_13 nomargin">{{$data->os_version}} ({{$data->os_name}})</div>
+                                <div class="grid_13 nomargin">{{$data->os_version}} {{$data->os_name}}</div>
                             </div>
                             
                             <div class="border_bottom">
@@ -317,7 +320,11 @@
                 </div>
                 </div>
                 <div class="clear"></div>
-                <div class="mob_price2">Rs: {{$relate->price}}</div>
+                @if($relate->price != 0)
+                    <div class="mob_price2">Rs: {{$relate->price}}</div>
+                @else
+                    <div class="mob_price2">Comming Soon</div>
+                @endif
             </li>
         @endforeach    
         </ul>

@@ -20,7 +20,7 @@
                     <p class="mob_title2">
                         <a href="{{url('',['singles',$data->pid,$data->cat_id])}}">{{$data->name}}</a>
                     </p>
-                    <span class="price"></span>
+                    <span class="price">{{$data->price}}</span>
                     <p class="mob_detail">
                         {{substr($data->description,0,60)}}   
                     </p>

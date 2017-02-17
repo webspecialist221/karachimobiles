@@ -21,7 +21,7 @@
 <div class="clear"></div>
 <div id="header">
     <div class="logo">
-        <a href="index.php"><img src="{{asset('assets/images/logo.png')}}" alt="Mobile Prices" title="Mobile Prices" /></a>
+        <a href="{{url('/')}}"><img src="{{asset('assets/images/logo.png')}}" alt="Mobile Prices" title="Mobile Prices" /></a>
     </div>
     <div class="header_banner" style="border:1px solid;background:#fff">
         <img src="{{asset('assets/images/ads.jpg')}}" alt="" />

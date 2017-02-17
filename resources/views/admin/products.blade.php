@@ -39,7 +39,7 @@
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Product Description<span class="required">*</span>
                   </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <textarea class="form-control" name="description" id="" cols="30" rows="4" required="required"></textarea>
+                        <textarea class="form-control" name="description" id="" cols="30" rows="4" ></textarea>
                     </div>
                 </div>
 
@@ -63,9 +63,9 @@
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Product Dimension <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="" name="dimensions_length" required="required" class="form-control col-sm-4" style="width:160px" placeholder="Length">
-                <input type="text" id="" name="dimensions_width" required="required" class="form-control col-sm-4" style="width:160px;margin-left:5px;" placeholder="Width">
-                <input type="text" id="" name="dimensions_depth" required="required" class="form-control col-sm-4" style="width:160px;margin-left:5px;" placeholder="Depth">
+                <input type="text" id="" name="dimensions_length"  class="form-control col-sm-4" style="width:160px" placeholder="Length">
+                <input type="text" id="" name="dimensions_width"  class="form-control col-sm-4" style="width:160px;margin-left:5px;" placeholder="Width">
+                <input type="text" id="" name="dimensions_depth"  class="form-control col-sm-4" style="width:160px;margin-left:5px;" placeholder="Depth">
               </div>
             </div>
 
@@ -118,21 +118,14 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Display Color <span class="required">*</span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Product color <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" name="color" class="form-control">
               </div>
             </div>
 
-            <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Screen Size<span class="required">*</span>
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="number" id="" name="scree_width" required="required" class="form-control col-sm-4" style="width:245px" placeholder="Width">
-                <input type="number" id="" name="screen_height" required="required" class="form-control col-sm-4" style="width:245px;margin-left:5px;" placeholder="Height">
-              </div>
-            </div>
+            
 
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Display Size <span class="required">*</span>
@@ -151,43 +144,11 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Technology <span class="required">*</span>
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="technology" class="form-control">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">SIM <span class="required">*</span>
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="sim" class="form-control">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Resoultion <span class="required">*</span>
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="resolutions" class="form-control">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Status <span class="required">*</span>
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" name="status" class="form-control">
-              </div>
-            </div>
-
-            <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Internal Memory<span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="" name="ram" required="required" class="form-control col-md-12 col-xs-12" style="width:235px" placeholder="Ram">
-              <input type="text" id="" name="ram_unit" required="required" class="form-control col-md-12 col-xs-12" style="width:250px;margin-left:10px;" placeholder="e.g GB">
+                <input type="text" id="" name="ram"  class="form-control col-md-12 col-xs-12" style="width:235px" placeholder="Ram">
+              <input type="text" id="" name="ram_unit"  class="form-control col-md-12 col-xs-12" style="width:250px;margin-left:10px;" placeholder="e.g GB">
               </div>
             </div>
 
@@ -219,12 +180,13 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">OS<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="os" required="required" class="form-control col-md-7 col-xs-12" style="width:200px;">
+                        <input type="text" id="" name="os"  class="form-control col-md-7 col-xs-12" style="width:200px;">
 
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="roles" style="width:90px;">
                        Os Type<span class="required">*</span>
                       </label>
-                      <select name="os_type" id="" class="form-control" required="required" style="width:200px;">
+                      <select name="os_type" id="" class="form-control"  style="width:200px;">
+                      <option value="N/A">N/A</option>
                       <option value="Android">Android Phones</option>
                       <option value="Symbian">Symbian Phones</option>
                       <option value="Windows">Windows Phones</option>
@@ -239,7 +201,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Processor<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="processor" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="processor"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -247,7 +209,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Battery<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="battery" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="battery"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -255,7 +217,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Frequency<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="frequency" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="frequency"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -263,7 +225,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Browser<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="browser" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="browser"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -271,7 +233,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Colors<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="colors" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="colors"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -279,7 +241,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Entertainment<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="entertainment" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="entertainment"  class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <br>
@@ -287,7 +249,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Other Features<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <textarea id="" name="other" required="required" class="form-control col-md-7 col-xs-12"></textarea><grammarly-btn><div style="visibility: hidden; z-index: 2;" class="_e725ae-textarea_btn _e725ae-not_focused" data-grammarly-reactid=".3"><div class="_e725ae-transform_wrap" data-grammarly-reactid=".3.0"><div title="Protected by Grammarly" class="_e725ae-status" data-grammarly-reactid=".3.0.0">&nbsp;</div></div></div></grammarly-btn>
+                        <textarea id="" name="other"  class="form-control col-md-7 col-xs-12"></textarea><grammarly-btn><div style="visibility: hidden; z-index: 2;" class="_e725ae-textarea_btn _e725ae-not_focused" data-grammarly-reactid=".3"><div class="_e725ae-transform_wrap" data-grammarly-reactid=".3.0"><div title="Protected by Grammarly" class="_e725ae-status" data-grammarly-reactid=".3.0.0">&nbsp;</div></div></div></grammarly-btn>
                       </div>
                     </div>
                     <br>
@@ -295,7 +257,55 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Messaging<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="" name="messaging" required="required" class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="" name="messaging"  class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Technology<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="" name="technology"  class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Resolution<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="" name="resolution"  class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Sim<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="" name="sim"  class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Status<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" id="" name="status"  class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Meta Keyword<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <textarea class="form-control" name="meta_keyword" cols="30" rows="4"></textarea>
+                      </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first_name">Meta Description<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <textarea class="form-control" name="meta_description" cols="30" rows="4"></textarea>
                       </div>
                     </div>
                     <br>

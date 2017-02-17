@@ -12,7 +12,7 @@ class Products extends Model
      * @var array
      */
     protected $table="products";
-    protected $fillable = ['cat_id','name','description','img','price','three_g','four_g','wifi','camera','bluetooth','fm_radio','os','availiblity'];
+    protected $fillable = ['cat_id','name','description','img','price','three_g','four_g','wifi','camera','bluetooth','fm_radio','os','availiblity','meta_keyword','meta_description'];
 
     /**
      * The attributes that should be hidden for arrays.

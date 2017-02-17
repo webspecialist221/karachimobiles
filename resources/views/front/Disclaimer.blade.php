@@ -8,7 +8,7 @@
     <div class="list_cellphone">
       <p style="line-height: 20px;font-size: 14px;"">
         
-        Disclaimer: The Contents on this website is elite assets of Karachimobile.com But mobile manufactures brands logos are the properties of their individual owner. The Mobiles price update daily basis from local Mobile phone shop and Mobile Dealer in Karachi. But these products price is not 100% accurate (Human Error possible). For 100% correct price Please contact or visit your local Mobile phone shop or Mobile Dealers. Karachimobile.com provide following Brand mobile phone price Nokia Mobile Price Nokia , Samsung , HTC , Apple iphone , Qmobile , Huawei , Oppo Mobiles.
+        <b>Disclaimer:</b> The Contents on this website is elite assets of Karachimobile.com But mobile manufactures brands logos are the properties of their individual owner. The Mobiles price update daily basis from local Mobile phone shop and Mobile Dealer in Karachi. But these products price is not 100% accurate (Human Error possible). For 100% correct price Please contact or visit your local Mobile phone shop or Mobile Dealers. <b style="color:green;">Karachimobile.com </b> provide following Brand mobile phone price Nokia Mobile Price Nokia , Samsung , HTC , Apple iphone , Qmobile , Huawei , Oppo Mobiles.
       </p>       
     </div>
   </div>

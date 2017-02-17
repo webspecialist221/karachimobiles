@@ -10,12 +10,13 @@ use App\Models\Products;
 use App\Models\ProductsFeature;
 use App\Models\Category;
 use DB;
+use Mail;
 
 class ProductController extends Controller
 {
     public function index()
     {
-    	$slider = DB::table('products')->select('products.*','products.id as pid','product_features.*','product_features.id as pfid')->join('product_features','product_features.product_id','=','products.id')->limit(50)->get();
+    	$slider = DB::table('products')->select('products.*','products.id as pid','product_features.*','product_features.id as pfid')->join('product_features','product_features.product_id','=','products.id')->limit(20)->orderBy('products.id','desc')->get();
     	$samsung = DB::table('products')->select('products.*','products.id as pid','product_features.*','product_features.id as pfid')->join('product_features','product_features.product_id','=','products.id')->join('categories','categories.id','=','products.cat_id','left')->where('categories.title','=','Samsung')->limit(7)->orderBy('products.id','desc')->get();
     	$iphones = DB::table('products')->select('products.*','products.id as pid','product_features.*','product_features.id as pfid')->join('product_features','product_features.product_id','=','products.id')->join('categories','categories.id','=','products.cat_id','left')->where('categories.title','=','Apple iphone')->limit(7)->orderBy('products.id','desc')->get();
     	$nokia = DB::table('products')->select('products.*','products.id as pid','product_features.*','product_features.id as pfid')->join('product_features','product_features.product_id','=','products.id')->join('categories','categories.id','=','products.cat_id','left')->where('categories.title','=','Nokia')->limit(7)->orderBy('products.id','desc')->get();
@@ -34,13 +35,15 @@ class ProductController extends Controller
     		 'qmobiles' => $qmobile,
     		 'htcs' => $htc,
     		 'categories' => $categories,
-    		 'products' => $products
+    		 'products' => $products,
+             'title' => "Mobile phone prices - Pakistan's daily updated mobile phone prices Pakistan Karachi Mobile"
     		]);
     }
 
     public function allProducts($id)
     {
-        $productData = Products::where('cat_id','=',$id)->orderBy('products.id','desc')->get();
+        $productData = Products::where('cat_id','=',$id)->orderBy('products.id','desc')->paginate(24)->toArray();
+        // dd($productData);
         $cat = Category::find($id);
     	$categories = Category::all();
     	$products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(50)->get();
@@ -48,7 +51,8 @@ class ProductController extends Controller
 							    		 'products' => $products,
                                          'productData' => $productData,
                                          'cat_id' => $id,
-                                         'cat_name' => $cat->title
+                                         'cat_name' => $cat->title,
+                                          'title' => $cat->title.' Mobiles'
 							    		]);
     }
 
@@ -63,7 +67,8 @@ class ProductController extends Controller
     	return view('front/single',['categories' => $categories,
                                     'products' => $products,
                                     'data' => $productData,
-						    		'relateds' => $related
+						    		'relateds' => $related,
+                                    'title' => $productData->name
 						    		]);
     }
 
@@ -117,7 +122,8 @@ class ProductController extends Controller
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/latest',['categories' => $categories,
                                          'products' => $products,
-                                         'productData' => $productData
+                                         'productData' => $productData,
+                                         'title' => 'Latest Mobile Phones'
                                         ]);
     }
 
@@ -129,7 +135,8 @@ class ProductController extends Controller
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/viewed',['categories' => $categories,
                                          'products' => $products,
-                                         'productData' => $productData
+                                         'productData' => $productData,
+                                         'title' => 'Most Viewed Mobile Phones'
                                         ]);
     }
 
@@ -138,7 +145,8 @@ class ProductController extends Controller
         $categories = Category::all();
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/about',['categories' => $categories,
-                                         'products' => $products
+                                         'products' => $products,
+                                         'title' => 'About Us'
                                         ]);
     }
 
@@ -147,7 +155,8 @@ class ProductController extends Controller
         $categories = Category::all();
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/disclaimer',['categories' => $categories,
-                                         'products' => $products
+                                         'products' => $products,
+                                         'title' => 'Disclaimer'
                                         ]);
     }
 
@@ -156,7 +165,8 @@ class ProductController extends Controller
         $categories = Category::all();
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/advertising',['categories' => $categories,
-                                         'products' => $products
+                                         'products' => $products,
+                                         'title' => 'Advertise With Us'
                                         ]);
     }
 
@@ -165,7 +175,34 @@ class ProductController extends Controller
         $categories = Category::all();
         $products = DB::table('products')->select('products.*','products.id as pid')->join('categories','categories.id','=','products.cat_id','left')->limit(20)->orderBy('products.id','desc')->get();
         return view('front/contact',['categories' => $categories,
-                                         'products' => $products
+                                         'products' => $products,
+                                         'title' => 'Contact Us'
                                         ]);
+    }
+
+    public function contactus(Request $request)
+    {
+        // dd($request->all());
+        $name = $request->name;
+        $email = $request->email;
+        $from = $request->email;
+        $subject = $request->subject;
+        $messageBody = $request->message;
+        // dd($message);
+        $anwser = $request->anwser;
+        if($anwser == 8){
+            Mail::send('emails.email',['messageBody' => $messageBody],
+                        function ($message) use ($email) {
+                            $message->from('latestmobileprice@gmail.com', 'Karachi Mobile');
+                            $message->replyTo($email);
+                            $message->sender($email);
+                            $message->subject("Karachi Mobile User Feed Back");
+                            $message->to('latestmobileprice@gmail.com');
+                        }
+                    );
+                return redirect('contact');
+            }else{
+                return redirect('contact');
+            }
     }
 }
